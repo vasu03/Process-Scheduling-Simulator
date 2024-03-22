@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Robin Scheduling</title>
+    <link rel="stylesheet" href="RoundRobin.css">
+</head>
+<body>
+    <header>
+        <h1>Round Robin Scheduling</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="inputs-container">
+                <div class="noOfProcIn">
+                    <div class="inputField">
+                        <label for="num_processes">No. of Processes:</label>
+                        <input type="number" id="num_processes">
+                    </div>
+                    <button type="button" onclick="generateInputs()">Generate Inputs</button>
+                </div>
+
+                <div class="procTimeInputs">
+                    <div id="processInputs"></div>
+                </div>
+                <div class="generate-box">
+                    <div class="time-quanta">
+                        <label for="time_quantum">Time Quanta:</label>
+                        <input type="number" id="time_quantum" step="0.5">
+                    </div>
+                    <button type="button" onclick="generateGantt()">Generate Gantt Chart</button>
+                </div>
+            </div>
+            
+            <div class="output-container">
+                Process Information Table
+                <table id="processTable">
+                    <thead>
+                        <tr>
+                            <th>Process ID</th>
+                            <th>Arrival Time</th>
+                            <th>Burst Time</th>
+                            <th>Completion Time</th>
+                            <th>Turnaround Time</th>
+                            <th>Waiting Time</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                Ready Queue
+                <div id="readyQueueChart"></div>
+                Gantt Chart
+                <div id="ganttChart"></div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="RoundRobin.js"></script>
+</html>

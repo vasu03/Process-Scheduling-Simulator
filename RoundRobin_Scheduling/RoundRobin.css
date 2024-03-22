@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body { background-color: #f4f4f4; }
+h1 { margin: 0; }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #173a51;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+main {
+    width: 95vw;
+    min-height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 98%;
+    height: 98%;
+    margin-inline: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.inputs-container{
+    height: 100%;
+    width: 35%;
+    padding: .5rem;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    background-color: #d6ebf9;
+    border-radius: 10px;
+}
+.noOfProcIn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .5rem;
+    width: auto;
+    font-size: .8rem;
+    transition: 1s ease;
+}
+
+.procTimeInputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    font-size: .9rem;
+}
+.process-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    font-size: .8rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+.generate-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .5rem;
+}
+
+.time-quanta{
+    padding: .5rem;
+    font-size: .8rem;
+}
+
+input{
+    background-color: transparent;
+    border: 1px solid #173a51;
+    border-radius: 5px;
+    padding-inline-start: .3rem;
+    width: 5.5rem;
+    height: 2rem;
+    font-size: 14px;
+}
+
+button{
+    background-color: #173a51;
+    border: 1px solid #173a51;
+    border-radius: 8px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .3rem .5rem;
+    cursor: pointer;
+}
+
+
+.output-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    height: 70%;
+}
+
+#ganttChart, #readyQueueChart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    border-radius: 10px;
+    overflow-x: auto;
+    overflow-x: hidden;
+    padding-inline: 1rem;
+    margin: .5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #d6ebf9;
+}
+
+#processTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#processTable th,
+#processTable td {
+    border: 1px solid #173a51;
+    padding: .2rem .5rem;
+    text-align: center;
+}
+
+#processTable th:first-child {
+    border-right: none;
+}
+.process {
+    height: 40px;
+    background-color: #173a51;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: width 0.5s ease-in-out;
+}
+.process:hover {
+    cursor: pointer;
+    background-color: #265676;
+}
+
+.idle-process{
+    background-color: #d93838;
+}
